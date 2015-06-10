@@ -26,12 +26,32 @@ Plugin 'FuzzyFinder'
 " scripts not on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " ...
+" haskell
+Plugin 'dag/vim2hs'
+
+Plugin 'scrooloose/nerdtree'
+
+" Generates config files for YouCompleteMe
+Plugin 'rdnetto/YCM-Generator'
+
+" rust.vim
+Plugin 'rust-lang/rust.vim'
 
 filetype plugin indent on     " required
 Bundle 'Valloric/YouCompleteMe'
 
+" set tab to 4 whitespace
 :set ts=4
+:set expandtab
 :set softtabstop=4
 :set shiftwidth=4
 :set nu
 color desert
+au FileType javascript set dictionary+=$HOME/.vim/plugin/dict/node.dict
+
+" iTerm2
+set t_Co=256
+" youcompleteme
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py' 
+let g:ycm_confirm_extra_conf = 0
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
