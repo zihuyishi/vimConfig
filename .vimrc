@@ -37,6 +37,12 @@ Plugin 'rdnetto/YCM-Generator'
 " rust.vim
 Plugin 'rust-lang/rust.vim'
 
+"vim-airline
+Plugin 'bling/vim-airline'
+
+execute pathogen#infect()
+syntax on
+
 filetype plugin indent on     " required
 Bundle 'Valloric/YouCompleteMe'
 
