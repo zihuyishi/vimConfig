@@ -40,6 +40,9 @@ Plugin 'rust-lang/rust.vim'
 "vim-airline
 Plugin 'bling/vim-airline'
 
+Plugin 'majutsushi/tagbar'
+" golang
+Plugin 'fatih/vim-go'
 execute pathogen#infect()
 syntax on
 
@@ -61,3 +64,8 @@ set t_Co=256
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py' 
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" taglist
+let Tlist_Use_Right_Window = 1
+set autochdir
+set tags=tags;
